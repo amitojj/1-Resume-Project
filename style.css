@@ -23,10 +23,10 @@ a {
   box-shadow: 7px 7px 18px 4px #a5a4a4;
   display: flex;
 }
-.top{
-    position: relative;
-    width: 268px;
-    height: 268px;
+.top {
+  position: relative;
+  width: 268px;
+  height: 268px;
 }
 .left {
   width: 268px;
@@ -60,7 +60,6 @@ a {
   border-radius: 50% 50% 50% 0;
   filter: grayscale();
 }
-
 
 /* Fields */
 .fields_left {
@@ -103,7 +102,8 @@ div.head {
   font-size: 12px;
   border: 3px solid #fefefe;
 }
-div.content , div.content>p>a{
+div.content,
+div.content > p > a {
   font-size: 14px;
   font-weight: 400;
   margin-bottom: 20px;
@@ -132,13 +132,13 @@ div.content , div.content>p>a{
   border-radius: 5px; /* Create a rounded shape */
   margin-right: 7px;
   margin-left: -4px;
-  margin-top: 3px;
+  margin-top: 5px;
 }
 .separator {
   margin: 20px 20px;
 }
-.hdr{
-    font-size: 15px;
-    font-weight: 600;
-    color: #fefefe;
+.hdr {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fefefe;
 }

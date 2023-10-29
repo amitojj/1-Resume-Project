@@ -5,5 +5,7 @@
 - Custom border radius
 - Image Filters
 - Shadows
+- used ::before, ::after pseudo elements to create bars and dots
+
 
 
