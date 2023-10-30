@@ -1,3 +1,17 @@
+:root{
+    --cbg1:#d8d8d8;
+    --cshd:#a5a4a4;
+    --c1:#333333;
+    --c2:#fefefe;
+    --c3:#f2ab01;
+    --c4:#e4e4e4;
+    --c5:#b0b0b0;
+    --c6:#595959;
+    --rale:"Raleway", sans-serif;
+    --nun:'Nunito', sans-serif;
+    --mon:'Montserrat', sans-serif;
+
+}
 * {
     margin: 0px;
     padding: 0px;
@@ -5,34 +19,33 @@
 }
 body {
     padding-block: 20px;
-    background-color: #d8d8d8;
-    /* min-height: 100vh; */
-    /* height: 100%; */
-    font-family: "Raleway", sans-serif;
+    background-color: var(--cbg1);
+    font-family: var(--rale);
 }
 a {
     text-decoration: none;
-    color: #fefefe;
+    color: var(--c5);
+}
+a:hover{
+    color: var(--c2);
 }
 
 .container {
-    background-color: #ffffff;
+    background-color:var(--c2);
     width: 768px;
     height: auto;
     margin: auto;
-    box-shadow: 7px 7px 18px 4px #a5a4a4;
+    box-shadow: 7px 7px 18px 4px var(--cshd);
     display: flex;
+}
+.left {
+    width: 268px;
+    background-color: var(--c1);
 }
 .top {
     position: relative;
     width: 268px;
     height: 268px;
-}
-.left {
-    width: 268px;
-    /* height: auto; */
-    background-color: #333333;
-    color: #fefefe;
 }
 .triangle {
     position: absolute;
@@ -41,17 +54,16 @@ a {
     z-index: 1;
     border-style: solid;
     border-width: 268px 268px 0 0;
-    border-color: #f2ab01 transparent transparent transparent;
+    border-color: var(--c3) transparent transparent transparent;
 }
 .drop {
     position: absolute;
-    background-color: #d8d8d8;
     top: 55px;
     left: 55px;
     width: 158px;
     height: 158px;
     z-index: 2;
-    border: 6px solid white;
+    border: 6px solid var(--c2);
     border-radius: 50% 50% 50% 0;
 }
 .drop img {
@@ -64,97 +76,93 @@ a {
 /* Fields */
 .fields_left {
     padding: 25px 0;
-    border-left: 1px solid #d8d8d8;
+    border-left: 1px solid var(--cbg1);
     margin-left: 40px;
     margin-top: -40px;
+    color: var(--cbg1);
 }
 .list {
     display: flex;
     align-items: center;
 }
-div.head {
-    margin-bottom: 30px;
+.head {
+    margin-bottom: 25px;
     font-size: 20px;
     font-weight: 800;
-    /* letter-spacing: 0.5px */
-}
-.icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fefefe;
-    border-radius: 50%;
-    margin: auto;
+    color: var(--c2);
 }
 .icon-box {
     width: 34px;
+}
+.icon {
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    margin: auto;
+}
+.fields_left i {
+    color: #333333;
 }
 .big {
     width: 21px;
     height: 21px;
     font-size: 14px;
+    background-color: var(--c2);
+
 }
-.icon.small {
+.small {
     width: 17px;
     height: 17px;
     font-size: 12px;
+    background-color: var(--c5);
+
 }
-.dot {
-    font-size: 12px;
-    border: 3px solid #fefefe;
-}
-div.content,
-div.content > p > a {
+
+.content{
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 20px;
-    color: #c6c6c6;
+    color:var(--c5);
 }
-.fields_left i {
-    color: #333333;
+.list::before{
+    content: ""; 
+    display: inline-block;
+    width: 8px; 
+    background-color: var(--c3);
+    border-radius: 4px; 
+    margin-left: -4px;
 }
 .head::before {
-    content: ""; /* Create an empty marker */
-    display: inline-block;
-    width: 8px; /* Adjust the width to control the elongation */
-    height: 27px; /* Adjust the height to control the elongation */
-    background-color: #f2ab01; /* Change the marker color */
-    border-radius: 5px; /* Create a rounded shape */
-    margin-right: 6px;
-    margin-left: -4px;
-    margin-top: -2px;
+    height: 27px;
+    margin-right: 7px;
 }
 .content::before {
-    content: ""; /* Create an empty marker */
-    display: inline-block;
-    width: 8px; /* Adjust the width to control the elongation */
-    height: 8px; /* Adjust the height to control the elongation */
-    background-color: #f2ab01; /* Change the marker color */
-    border-radius: 5px; /* Create a rounded shape */
+    height: 8px;
     margin-right: 7px;
-    margin-left: -4px;
-    margin-top: 5px;
 }
-.separator {
-    margin: 20px 20px;
+.separator-s {
+    margin: 20px;
 }
-.hdr {
+.subhdr {
     font-size: 15px;
     font-weight: 600;
-    color: #fefefe;
+    color: var(--c2);
 }
+
+
+
+
 .right {
     width: 100%;
-    /* height: auto; */
-    background-color: #fefefe;
-    color: #333333;
+    background-color: var(--c2);
+    color: var(--c1);
     position: relative;
+    padding-right: 30px;
 }
 .fields_right {
-    padding: 85px 0;
-    border-left: 2px solid #000000;
+    padding: 92px 0;
+    border-left: 2px solid var(--c1);
     margin-left: 40px;
-    margin-top: 0px;
     height: 100%;
     z-index: 1;
     position: relative;
@@ -169,11 +177,11 @@ div.content > p > a {
     z-index: 1;
     border-style: solid;
     border-width: 0 0 100px 100px;
-    border-color: transparent transparent #f2ab01 transparent;
+    border-color: transparent transparent var(--c3) transparent;
 }
 .me{
     position: absolute;
-    background-color: #e7e7e7;
+    background-color: var(--c4);
     width:100%;
     height: 120px;
     margin-top: 75px;
@@ -188,28 +196,19 @@ div.content > p > a {
     color: #f2ab01;
 }
 .occu{
-    text-transform: uppercase;
     font-size: 15px;
     font-weight: 500;
 }
 .me_head{
-    display: flex;
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
 .me_head::before {
-    content: ""; /* Create an empty marker */
-    display: inline-block;
-    width: 8px; /* Adjust the width to control the elongation */
-    height: 85px; /* Adjust the height to control the elongation */
-    background-color: #f2ab01; /* Change the marker color */
-    border-radius: 5px; /* Create a rounded shape */
+    height: 85px; 
     margin-right: 25px;
-    margin-left: -4px;
-    margin-top: -11px;
 }
-.separator-r {
-    margin: 50px;
+.separator-m {
+    margin: 60px;
 }
 .separator-b {
     margin: 80px;
@@ -218,84 +217,59 @@ div.content > p > a {
     margin-bottom: 30px;
     font-size: 20px;
     font-weight: 800;
-    /* letter-spacing: 0.5px */
 }
 .head-r::before {
-    content: ""; /* Create an empty marker */
-    display: inline-block;
-    width: 8px; /* Adjust the width to control the elongation */
-    height: 27px; /* Adjust the height to control the elongation */
-    background-color: #f2ab01; /* Change the marker color */
-    border-radius: 5px; /* Create a rounded shape */
+    height: 27px; 
     margin-right: 15px;
-    margin-left: -4px;
-    margin-top: -2px;
 }
-.icon-y {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f2ab01;
-    border-radius: 50%;
-    margin: auto;
-}
-
 .big-y {
     width: 22px;
     height: 22px;
     font-size: 14px;
+    background-color: #f2ab01;
 }
 
 
 .icon-box-r{
     width: 44px;
 }
+.desc{
+    padding-left: 30px;
+    text-align: justify;
+    word-spacing: 4px;
+    font-weight: 500;
+}
+.content-s{
+    font-size: 10px;
+    color: var(--c6);
+}
+.content-p{
+    font-size: 12px;
+}
 
 .content-r{
-    font-size: 12px;
-    padding-inline: 30px;
-    /* word-spacing: 5px; */
-    color: #000000;
+    font-size: 11px;
     font-weight: 400;
     display: flex;
     justify-content:space-between;
 }
 
-.content-p{
-    font-size: 11px;
-    padding-inline: 30px;
-    /* word-spacing: 5px; */
-    letter-spacing: 1px;
-    text-align: justify;
-    color: #000000;
-    font-weight: 400;
-    display: flex;
-    
-}
-.hdr-r {
+.subhdr-r {
     font-size: 15px;
     font-weight: 800;
-    color: #000000;
 }
-.content-r::before {
-    content: ""; /* Create an empty marker */
-    display: inline-block;
-    width: 8px; /* Adjust the width to control the elongation */
-    height: 8px; /* Adjust the height to control the elongation */
-    background-color: #f2ab01; /* Change the marker color */
-    border-radius: 5px; /* Create a rounded shape */
-    margin-right: 27px;
-    margin-left: -35px;
-    margin-top: 5px;
-}
-.subdr{
-    font-weight: 600;
+.company{
+    font-weight: 700;
     margin-bottom: 12px;
 }
-div.subdr{
+div.company{
     flex-grow: 1;
     text-align: end;
     
+}
+.content-r::before {
+    height: 8px; /* Adjust the height to control the elongation */
+    margin-right: 27px;
 }
 .skills{
     display: grid;
@@ -326,8 +300,8 @@ div.subdr{
 }
 .fbar{
     width: 100px;
-    height: 7px;
-    border-radius: 5px;
+    height: 4px;
+    /* border-radius: 5px; */
     flex-grow: 0;
 }
 .fbar-90{
