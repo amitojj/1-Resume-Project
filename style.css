@@ -20,7 +20,7 @@
 body {
     padding-block: 20px;
     background-color: var(--cbg1);
-    font-family: var(--rale);
+    font-family: var(--nun);
 }
 a {
     text-decoration: none;
@@ -277,7 +277,6 @@ div.company{
     grid-template-rows: auto;
     font-size: 12px;
     margin-left: 33px;
-    margin-right: 30px;
     font-weight: 600;
     column-gap: 25px;
     row-gap: 10px;
